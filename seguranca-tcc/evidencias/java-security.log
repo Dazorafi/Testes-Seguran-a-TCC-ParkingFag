@@ -1,0 +1,2438 @@
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+11:16:23.308 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [br.edu.fag.parking.SecurityIntegrationTest]: SecurityIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:16:23.535 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration br.edu.fag.parking.ParkingApplication for test class br.edu.fag.parking.SecurityIntegrationTest
+{"@timestamp":"2026-10-28T11:16:23.8742287-03:00","@version":"1","message":"Starting SecurityIntegrationTest using Java 17.0.19 with PID 3540 (started by Ti in C:\\Users\\Ti\\Desktop\\GPT\\TCC\\orchestrador-parking-fag)","logger_name":"br.edu.fag.parking.SecurityIntegrationTest","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:23.8779267-03:00","@version":"1","message":"The following 1 profile is active: \"test\"","logger_name":"br.edu.fag.parking.SecurityIntegrationTest","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:24.6372797-03:00","@version":"1","message":"Bootstrapping Spring Data JPA repositories in DEFAULT mode.","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationDelegate","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:24.6910223-03:00","@version":"1","message":"Finished Spring Data repository scanning in 44 ms. Found 4 JPA repository interfaces.","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationDelegate","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:25.0404771-03:00","@version":"1","message":"HHH000204: Processing PersistenceUnitInfo [name: default]","logger_name":"org.hibernate.jpa.internal.util.LogHelper","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:25.0904506-03:00","@version":"1","message":"HHH000412: Hibernate ORM core version 6.6.53.Final","logger_name":"org.hibernate.Version","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:25.1232972-03:00","@version":"1","message":"HHH000026: Second-level cache disabled","logger_name":"org.hibernate.cache.internal.RegionFactoryInitiator","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:33.3099953-03:00","@version":"1","message":"No LoadTimeWeaver setup: ignoring JPA class transformer","logger_name":"org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:33.3319221-03:00","@version":"1","message":"HikariPool-1 - Starting...","logger_name":"com.zaxxer.hikari.HikariDataSource","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:33.4578668-03:00","@version":"1","message":"HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:security user=SA","logger_name":"com.zaxxer.hikari.pool.HikariPool","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:33.4588641-03:00","@version":"1","message":"HikariPool-1 - Start completed.","logger_name":"com.zaxxer.hikari.HikariDataSource","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:33.497996-03:00","@version":"1","message":"HHH10001005: Database info:\n\tDatabase JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']\n\tDatabase driver: undefined/unknown\n\tDatabase version: 2.3.232\n\tAutocommit mode: undefined/unknown\n\tIsolation level: undefined/unknown\n\tMinimum pool size: undefined/unknown\n\tMaximum pool size: undefined/unknown","logger_name":"org.hibernate.orm.connections.pooling","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:34.0391431-03:00","@version":"1","message":"HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)","logger_name":"org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:34.4915141-03:00","@version":"1","message":"Initialized JPA EntityManagerFactory for persistence unit 'default'","logger_name":"org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:34.7394346-03:00","@version":"1","message":"Hibernate is in classpath; If applicable, HQL parser will be used.","logger_name":"org.springframework.data.jpa.repository.query.QueryEnhancerFactory","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:35.7918031-03:00","@version":"1","message":"Initializing Spring TestDispatcherServlet ''","logger_name":"org.springframework.boot.test.mock.web.SpringBootMockServletContext","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:35.7918031-03:00","@version":"1","message":"Initializing Servlet ''","logger_name":"org.springframework.test.web.servlet.TestDispatcherServlet","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:35.7967863-03:00","@version":"1","message":"Exposing 2 endpoints beneath base path '/actuator'","logger_name":"org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:35.8058337-03:00","@version":"1","message":"Completed initialization in 14 ms","logger_name":"org.springframework.test.web.servlet.TestDispatcherServlet","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:35.8708014-03:00","@version":"1","message":"Started SecurityIntegrationTest in 12.244 seconds (process running for 13.198)","logger_name":"br.edu.fag.parking.SecurityIntegrationTest","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:35.9026942-03:00","@version":"1","message":"SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'","logger_name":"org.springdoc.core.events.SpringDocAppInitializer","thread_name":"main","level":"WARN","level_value":30000}
+{"@timestamp":"2026-10-28T11:16:35.9036909-03:00","@version":"1","message":"SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'","logger_name":"org.springdoc.core.events.SpringDocAppInitializer","thread_name":"main","level":"WARN","level_value":30000}
+{"@timestamp":"2026-10-28T11:16:36.0058154-03:00","@version":"1","message":"operational_event message=Orquestrador iniciado","logger_name":"br.edu.fag.parking.LogService","thread_name":"main","level":"INFO","level_value":20000}
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+{"@timestamp":"2026-10-28T11:16:37.4970715-03:00","@version":"1","message":"operational_event message=Reserva criada: b6c2aa6c-11e0-4f06-a227-b524a0c59276 vaga SEC-A","logger_name":"br.edu.fag.parking.LogService","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:37.6286225-03:00","@version":"1","message":"operational_event message=Reserva criada: 84ca7463-6696-4320-9227-b8f8794551ca vaga SEC-A","logger_name":"br.edu.fag.parking.LogService","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:37.6624667-03:00","@version":"1","message":"operational_event message=Reserva CANCELLED: 84ca7463-6696-4320-9227-b8f8794551ca","logger_name":"br.edu.fag.parking.LogService","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:37.700308-03:00","@version":"1","message":"operational_event message=Reserva criada: 12d01c7d-2b1f-430f-afac-d29b64c35492 vaga SEC-A","logger_name":"br.edu.fag.parking.LogService","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:37.7209874-03:00","@version":"1","message":"operational_event message=Reserva COMPLETED: 12d01c7d-2b1f-430f-afac-d29b64c35492","logger_name":"br.edu.fag.parking.LogService","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:37.7390607-03:00","@version":"1","message":"operational_event message=Reserva criada: e58a85b3-7c1e-4733-9a67-39a8636ab606 vaga SEC-A","logger_name":"br.edu.fag.parking.LogService","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:37.7666121-03:00","@version":"1","message":"operational_event message=Reserva DISPLACED: e58a85b3-7c1e-4733-9a67-39a8636ab606","logger_name":"br.edu.fag.parking.LogService","thread_name":"main","level":"INFO","level_value":20000}
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.0", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000000"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.880116800Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.1", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000001"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.885099600Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.2", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000002"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.890083400Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.3", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000003"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.895066800Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.4", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000004"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.900050100Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.5", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000005"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.904979800Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.6", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000006"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.905588500Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.7", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000007"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.905588500Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.8", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000008"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.905588500Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.9", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000009"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.925235800Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.10", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000010"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.931216100Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.11", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000011"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.936199300Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.12", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000012"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.938899400Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.13", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000013"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.938899400Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.14", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000014"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.938899400Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.15", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000015"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.957651400Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.16", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000016"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.961637Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.17", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000017"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.966620100Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.18", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000018"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.971780200Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.19", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000019"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.972268400Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.20", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000020"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.972268400Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.21", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000021"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.988521200Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.22", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000022"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.993504700Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.23", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000023"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:37.998488700Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.24", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000024"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.003471800Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.25", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000025"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.005768300Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.26", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000026"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.005768300Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.27", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000027"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.005768300Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.28", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000028"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.023828500Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.29", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000029"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.030805300Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.30", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000030"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.037781800Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.31", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000031"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.038927500Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.32", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000032"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.038927500Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.33", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000033"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.056154500Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.34", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000034"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.061137600Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.35", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000035"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.066120200Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.36", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000036"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.070107800Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.37", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000037"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.072118200Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.38", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000038"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.072118200Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.39", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000039"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.072118200Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.40", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000040"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.089399200Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.41", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000041"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.094382200Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.42", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000042"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.098368500Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.43", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000043"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.102354600Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.44", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000044"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.105551200Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.45", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000045"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.105551200Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.46", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000046"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.105551200Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.47", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000047"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.121175Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.48", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000048"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.125753700Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.49", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000049"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.128745600Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.50", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000050"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.132730300Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.51", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000051"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.136717100Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.52", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000052"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.140704200Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.53", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000053"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.144691200Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.54", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000054"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.149675100Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.55", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000055"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.153661800Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.56", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000056"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.158566100Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.57", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000057"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.162553700Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.58", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000058"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.165543100Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.59", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000059"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.169529500Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/reservations
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-Parking-Client:"mobile", X-Forwarded-For:"203.0.113.60", Content-Length:"22", Cookie:"parking_session=0000000000000000000000000000000000000000060"]
+             Body = {"spotCode":"missing"}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ReservationController
+           Method = br.edu.fag.parking.ReservationController#reserve(Reserve, HttpServletRequest, HttpServletResponse)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.server.ResponseStatusException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 404
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Cache-Control:"no-store", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"code":"REQUEST_REJECTED","message":"Vaga inexistente","timestamp":"2026-10-28T14:16:38.172275300Z"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+{"@timestamp":"2026-10-28T11:16:38.5336994-03:00","@version":"1","message":"operational_event message=Reserva criada: 6988c090-910e-4ef6-9c58-4b897f4e7d44 vaga SEC-A","logger_name":"br.edu.fag.parking.LogService","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:38.6894031-03:00","@version":"1","message":"operational_event message=Reserva criada: 89c9c814-51e2-401d-a636-67d7d1b366c9 vaga SEC-A","logger_name":"br.edu.fag.parking.LogService","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:38.6983729-03:00","@version":"1","message":"Could not detect default configuration classes for test class [br.edu.fag.parking.SecurityFailClosedTest]: SecurityFailClosedTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.","logger_name":"org.springframework.test.context.support.AnnotationConfigContextLoaderUtils","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:38.7013638-03:00","@version":"1","message":"Found @SpringBootConfiguration br.edu.fag.parking.ParkingApplication for test class br.edu.fag.parking.SecurityFailClosedTest","logger_name":"org.springframework.boot.test.context.SpringBootTestContextBootstrapper","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:38.7367589-03:00","@version":"1","message":"Starting SecurityFailClosedTest using Java 17.0.19 with PID 3540 (started by Ti in C:\\Users\\Ti\\Desktop\\GPT\\TCC\\orchestrador-parking-fag)","logger_name":"br.edu.fag.parking.SecurityFailClosedTest","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:38.7377556-03:00","@version":"1","message":"The following 1 profile is active: \"test\"","logger_name":"br.edu.fag.parking.SecurityFailClosedTest","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.0055752-03:00","@version":"1","message":"Bootstrapping Spring Data JPA repositories in DEFAULT mode.","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationDelegate","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.0055752-03:00","@version":"1","message":"Finished Spring Data repository scanning in 13 ms. Found 4 JPA repository interfaces.","logger_name":"org.springframework.data.repository.config.RepositoryConfigurationDelegate","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.0721268-03:00","@version":"1","message":"HHH000204: Processing PersistenceUnitInfo [name: default]","logger_name":"org.hibernate.jpa.internal.util.LogHelper","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.0721268-03:00","@version":"1","message":"HHH000026: Second-level cache disabled","logger_name":"org.hibernate.cache.internal.RegionFactoryInitiator","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.0903407-03:00","@version":"1","message":"No LoadTimeWeaver setup: ignoring JPA class transformer","logger_name":"org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.0913372-03:00","@version":"1","message":"HikariPool-2 - Starting...","logger_name":"com.zaxxer.hikari.HikariDataSource","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.0933309-03:00","@version":"1","message":"HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:securityfailclosed user=SA","logger_name":"com.zaxxer.hikari.pool.HikariPool","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.0933309-03:00","@version":"1","message":"HikariPool-2 - Start completed.","logger_name":"com.zaxxer.hikari.HikariDataSource","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.0933309-03:00","@version":"1","message":"HHH10001005: Database info:\n\tDatabase JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']\n\tDatabase driver: undefined/unknown\n\tDatabase version: 2.3.232\n\tAutocommit mode: undefined/unknown\n\tIsolation level: undefined/unknown\n\tMinimum pool size: undefined/unknown\n\tMaximum pool size: undefined/unknown","logger_name":"org.hibernate.orm.connections.pooling","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.1256977-03:00","@version":"1","message":"HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)","logger_name":"org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.1296847-03:00","@version":"1","message":"Initialized JPA EntityManagerFactory for persistence unit 'default'","logger_name":"org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.3054457-03:00","@version":"1","message":"Initializing Spring TestDispatcherServlet ''","logger_name":"org.springframework.boot.test.mock.web.SpringBootMockServletContext","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.321071-03:00","@version":"1","message":"Initializing Servlet ''","logger_name":"org.springframework.test.web.servlet.TestDispatcherServlet","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.321685-03:00","@version":"1","message":"Exposing 2 endpoints beneath base path '/actuator'","logger_name":"org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.3266695-03:00","@version":"1","message":"Completed initialization in 5 ms","logger_name":"org.springframework.test.web.servlet.TestDispatcherServlet","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.3387489-03:00","@version":"1","message":"Started SecurityFailClosedTest in 0.633 seconds (process running for 16.674)","logger_name":"br.edu.fag.parking.SecurityFailClosedTest","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.3387489-03:00","@version":"1","message":"SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'","logger_name":"org.springdoc.core.events.SpringDocAppInitializer","thread_name":"main","level":"WARN","level_value":30000}
+{"@timestamp":"2026-10-28T11:16:39.3387489-03:00","@version":"1","message":"SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'","logger_name":"org.springdoc.core.events.SpringDocAppInitializer","thread_name":"main","level":"WARN","level_value":30000}
+{"@timestamp":"2026-10-28T11:16:39.3387489-03:00","@version":"1","message":"operational_event message=Orquestrador iniciado","logger_name":"br.edu.fag.parking.LogService","thread_name":"main","level":"INFO","level_value":20000}
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /api/v1/logs
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"131"]
+             Body = {"logs":[{"source":"unauthenticated-probe","level":"INFO","message":"security test","createdAt":"2026-10-28T14:16:39.355996300Z"}]}
+    Session Attrs = {}
+
+Handler:
+             Type = br.edu.fag.parking.ParkingController
+           Method = br.edu.fag.parking.ParkingController#logs(Logs)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"applied":1,"ignored":0}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+.
++-- JUnit Platform Suite [OK]
++-- JUnit Jupiter [OK]
+| +-- SecurityIntegrationTest [OK]
+| | +-- websocketConnectionCapRejectsClient101() [OK]
+| | +-- botsWithStableSourceAddressAreRateLimited() [OK]
+| | +-- idorCurrentReservationIsPrivateAndAnonymousMutationIsRejected() [OK]
+| | +-- sessionCookieHasTransportAndBrowserProtections() [OK]
+| | +-- idorBlocksOtherSessionEvenWithValidKnownId(String) [OK]
+| | | +-- IDOR: another session cannot cancel the known reservation ID [OK]
+| | | +-- IDOR: another session cannot confirm the known reservation ID [OK]
+| | | '-- IDOR: another session cannot reject the known reservation ID [OK]
+| | +-- sqlMetacharactersInLookupRemainLiteralAndDoNotEnumerateRecords() [OK]
+| | +-- injectionPayloadInLogIsStoredAsLiteralData() [OK]
+| | +-- botsAreRateLimitedEvenWhenRotatingCookiesAndSpoofingForwardedIp() [X] 
+| | |     Expecting actual:
+| | |       0
+| | |     to be greater than:
+| | |       0
+| | +-- ingestionRejectsMissingAndIncorrectKey(String) [OK]
+| | | +-- Ingestion credential rejected for route parking-spots/sync [OK]
+| | | +-- Ingestion credential rejected for route parking-spots/events [OK]
+| | | '-- Ingestion credential rejected for route logs [OK]
+| | +-- botWithoutClientHeaderIsForbidden() [OK]
+| | +-- generatedSessionSamplesAreDistinctAndMalformedCookieIsReplaced() [OK]
+| | +-- sessionStoredAsSha256AndNeverPublished() [OK]
+| | +-- injectionInReservationIsRejectedWithoutDatabaseMutation(String) [OK]
+| | | +-- Injection rejected in spotCode: ' OR '1'='1 [OK]
+| | | +-- Injection rejected in spotCode: SEC-A; DROP TABLE parking_spots;-- [OK]
+| | | +-- Injection rejected in spotCode: <script>alert(1)</script> [OK]
+| | | +-- Injection rejected in spotCode: ${7*7} [OK]
+| | | +-- Injection rejected in spotCode: $(echo SECURITY_PROBE) [OK]
+| | | '-- Injection rejected in spotCode: ../../etc/passwd [OK]
+| | '-- forgedOwnershipFieldsInJsonCannotChangeReservationOwner() [OK]
+| '-- SecurityFailClosedTest [OK]
+|   '-- missingConfiguredIngestionSecretMustNotPermitAnonymousWrites() [X] Status expected:<401> but was:<200>
+'-- JUnit Vintage [OK]
+
+Failures (2):
+  JUnit Jupiter:SecurityIntegrationTest:botsAreRateLimitedEvenWhenRotatingCookiesAndSpoofingForwardedIp()
+    MethodSource [className = 'br.edu.fag.parking.SecurityIntegrationTest', methodName = 'botsAreRateLimitedEvenWhenRotatingCookiesAndSpoofingForwardedIp', methodParameterTypes = '']
+    => java.lang.AssertionError: 
+Expecting actual:
+  0
+to be greater than:
+  0
+
+       br.edu.fag.parking.SecurityIntegrationTest.botsAreRateLimitedEvenWhenRotatingCookiesAndSpoofingForwardedIp(SecurityIntegrationTest.java:189)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:SecurityFailClosedTest:missingConfiguredIngestionSecretMustNotPermitAnonymousWrites()
+    MethodSource [className = 'br.edu.fag.parking.SecurityFailClosedTest', methodName = 'missingConfiguredIngestionSecretMustNotPermitAnonymousWrites', methodParameterTypes = '']
+    => java.lang.AssertionError: Status expected:<401> but was:<200>
+       org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:61)
+       org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:128)
+       org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:640)
+       org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+       br.edu.fag.parking.SecurityFailClosedTest.missingConfiguredIngestionSecretMustNotPermitAnonymousWrites(SecurityFailClosedTest.java:21)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+Test run finished after 16282 ms
+[         8 containers found      ]
+[         0 containers skipped    ]
+[         8 containers started    ]
+[         0 containers aborted    ]
+[         8 containers successful ]
+[         0 containers failed     ]
+[        24 tests found           ]
+[         0 tests skipped         ]
+[        24 tests started         ]
+[         0 tests aborted         ]
+[        22 tests successful      ]
+[         2 tests failed          ]
+
+{"@timestamp":"2026-10-28T11:16:39.3958099-03:00","@version":"1","message":"Closing JPA EntityManagerFactory for persistence unit 'default'","logger_name":"org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean","thread_name":"SpringApplicationShutdownHook","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.3997964-03:00","@version":"1","message":"HikariPool-1 - Shutdown initiated...","logger_name":"com.zaxxer.hikari.HikariDataSource","thread_name":"SpringApplicationShutdownHook","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.4007931-03:00","@version":"1","message":"HikariPool-1 - Shutdown completed.","logger_name":"com.zaxxer.hikari.HikariDataSource","thread_name":"SpringApplicationShutdownHook","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.40478-03:00","@version":"1","message":"Closing JPA EntityManagerFactory for persistence unit 'default'","logger_name":"org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean","thread_name":"SpringApplicationShutdownHook","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.4057768-03:00","@version":"1","message":"HikariPool-2 - Shutdown initiated...","logger_name":"com.zaxxer.hikari.HikariDataSource","thread_name":"SpringApplicationShutdownHook","level":"INFO","level_value":20000}
+{"@timestamp":"2026-10-28T11:16:39.4346799-03:00","@version":"1","message":"HikariPool-2 - Shutdown completed.","logger_name":"com.zaxxer.hikari.HikariDataSource","thread_name":"SpringApplicationShutdownHook","level":"INFO","level_value":20000}

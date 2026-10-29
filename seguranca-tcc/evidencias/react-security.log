@@ -1,0 +1,12 @@
+
+ RUN  v5.0.3 C:/Users/Ti/Desktop/GPT/TCC/view-parking-fag
+
+ ✓ src/test/security.test.tsx > SEC-XSS: untrusted API text in real React component > renders payload as text: <script>globalThis.securityProbe=1</script> 30ms
+ ✓ src/test/security.test.tsx > SEC-XSS: untrusted API text in real React component > renders payload as text: <img src=x onerror="globalThis.securityProbe=1"> 4ms
+ ✓ src/test/security.test.tsx > SEC-XSS: untrusted API text in real React component > renders payload as text: ${7*7} 3ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  11:09:31
+   Duration  1.40s (environment 74%, setup 13%, transform 6%, import 3%, tests 3%, worker 1%)
+
