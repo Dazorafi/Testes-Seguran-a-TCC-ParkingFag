@@ -1,0 +1,17 @@
+✔ SEC-PROXY-01: public requests cannot invoke ingestion or inspect secrets (77.3384ms)
+✔ SEC-PROXY-02: cross-origin reservation forgery never reaches backend (15.1702ms)
+✔ SEC-PROXY-03: oversized bot payload rejected before forwarding (8.7129ms)
+✔ SEC-PROXY-04: forged ingestion and forwarding headers stripped (5.3227ms)
+✔ SEC-PROXY-05: browser headers prohibit script injection and framing (5.281ms)
+✔ SEC-PROXY-06: encoded traversal cannot read files outside build (6.5629ms)
+✔ SEC-PROXY-07: observation - read bots encounter no rate limit at proxy (36.8545ms)
+✔ fronteira publica bloqueia ingestao, configuracoes e POST de outra origem (80.3542ms)
+✔ identificacao publica do deploy possui JSON legivel e commit verificavel (17.8511ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 313.8142

@@ -1,0 +1,33 @@
+
+> view-parking-fag@1.0.0 test:security
+> vitest run src/test/security.test.tsx && node --test scripts/security.test.mjs
+
+
+ RUN  v5.0.3 C:/Users/Ti/Desktop/GPT/TCC/view-parking-fag
+
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  11:16:42
+   Duration  926ms (environment 71%, setup 15%, transform 5%, tests 4%, import 4%, worker 1%)
+
+✔ SEC-PROXY-01: public requests cannot invoke ingestion or inspect secrets (39.9368ms)
+✔ SEC-PROXY-02: cross-origin reservation forgery never reaches backend (14.5973ms)
+✔ SEC-PROXY-03: oversized bot payload rejected before forwarding (7.2224ms)
+✔ SEC-PROXY-04: forged ingestion and forwarding headers stripped (5.8779ms)
+✔ SEC-PROXY-05: browser headers prohibit script injection and framing (4.7949ms)
+✔ SEC-PROXY-06: encoded traversal cannot read files outside build (7.6297ms)
+✔ SEC-PROXY-07: observation - read bots encounter no rate limit at proxy (36.8344ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 190.7261
+npm notice
+npm notice New major version of npm available! 11.13.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

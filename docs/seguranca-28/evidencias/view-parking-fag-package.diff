@@ -1,0 +1,12 @@
+diff --git a/package.json b/package.json
+index a1a96a5..6e9d798 100644
+--- a/package.json
++++ b/package.json
+@@ -9,6 +9,7 @@
+     "preview": "vite preview --host 0.0.0.0",
+     "lint": "eslint .",
+     "test": "vitest run && node --test scripts/serve.test.mjs",
++    "test:security": "vitest run src/test/security.test.tsx && node --test scripts/security.test.mjs",
+     "serve": "node scripts/serve.mjs",
+     "typecheck": "tsc -b"
+   },

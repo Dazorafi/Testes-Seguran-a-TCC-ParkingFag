@@ -1,0 +1,29 @@
+{
+  "data": "2026-10-29",
+  "java": {
+    "testes": 41,
+    "aprovados": 41,
+    "seguranca": 26
+  },
+  "python": {
+    "testes": 19,
+    "aprovados": 19,
+    "seguranca": 9
+  },
+  "react": {
+    "testes": 26,
+    "aprovados": 26,
+    "seguranca": 3
+  },
+  "node_servidor_e_proxy": {
+    "testes": 9,
+    "aprovados": 9,
+    "seguranca": 7
+  },
+  "seguranca_total": 45,
+  "seguranca_reprovados": 0,
+  "actionlint": "aprovado",
+  "deploy_plano": "5 casos aprovados; sem executar servicos",
+  "deploy_real": "pendente de runner configurado e primeira execucao no GitHub",
+  "github_actions": "conferir a aba Actions apos envio do PR"
+}

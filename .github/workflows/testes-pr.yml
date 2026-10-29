@@ -1,0 +1,158 @@
+name: Testes e build
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PIP_DISABLE_PIP_VERSION_CHECK: '1'
+
+concurrency:
+  group: testes-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  java:
+    name: Java - seguranca e integracao
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: TCC/orchestrador-parking-fag
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+          cache-dependency-path: TCC/orchestrador-parking-fag/pom.xml
+      - name: Executar todos os testes H2 e gerar JAR
+        run: bash ./mvnw -B -ntp verify
+      - name: Preservar relatorios mesmo quando um teste falhar
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: relatorios-java
+          path: TCC/orchestrador-parking-fag/target/surefire-reports/
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Publicar o JAR aprovado
+        uses: actions/upload-artifact@v7
+        with:
+          name: build-java
+          path: TCC/orchestrador-parking-fag/target/orchestrador-parking-fag-1.0.0.jar
+          if-no-files-found: error
+          retention-days: 7
+
+  python:
+    name: Python - seguranca e video
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: TCC/monitoramento-vagas
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: |
+            TCC/monitoramento-vagas/requirements.txt
+            TCC/monitoramento-vagas/requirements-dev.txt
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m pip install -e . --no-deps
+      - run: python -m ruff check .
+      - run: python -m compileall -q src
+      - run: python -m parking_monitor.main --validate-config
+      - run: python -m pytest -q --junitxml=reports/pytest.xml
+      - name: Preservar relatorio Python
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: relatorios-python
+          path: TCC/monitoramento-vagas/reports/pytest.xml
+          if-no-files-found: warn
+          retention-days: 14
+
+  frontend:
+    name: React e proxy - seguranca e build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: TCC/view-parking-fag
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: TCC/view-parking-fag/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - name: Testes de componentes e servidor
+        run: npm test
+      - name: Testes de seguranca do proxy HTTP
+        run: node --test scripts/security.test.mjs
+      - run: npm run build
+      - name: Publicar o frontend aprovado
+        uses: actions/upload-artifact@v7
+        with:
+          name: build-frontend
+          path: TCC/view-parking-fag/dist/
+          if-no-files-found: error
+          retention-days: 7
+
+  operacao:
+    name: Scripts de deploy - validacao
+    runs-on: windows-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Validar scripts PowerShell sem iniciar servicos
+        shell: powershell
+        run: |
+          $errorsFound = @()
+          foreach ($file in Get-ChildItem scripts -Filter *.ps1) {
+            $tokens = $null
+            $parseErrors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile($file.FullName,[ref]$tokens,[ref]$parseErrors) | Out-Null
+            $errorsFound += @($parseErrors)
+          }
+          if ($errorsFound.Count -gt 0) { $errorsFound | Format-List; throw 'Erro de sintaxe PowerShell.' }
+          & .\scripts\test-deploy.ps1
+
+  aprovado:
+    name: Todos os testes aprovados
+    needs: [java, python, frontend, operacao]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Exigir sucesso das tres suites
+        env:
+          JAVA_RESULT: ${{ needs.java.result }}
+          PYTHON_RESULT: ${{ needs.python.result }}
+          FRONTEND_RESULT: ${{ needs.frontend.result }}
+          OPERACAO_RESULT: ${{ needs.operacao.result }}
+        run: |
+          test "$JAVA_RESULT" = success
+          test "$PYTHON_RESULT" = success
+          test "$FRONTEND_RESULT" = success
+          test "$OPERACAO_RESULT" = success

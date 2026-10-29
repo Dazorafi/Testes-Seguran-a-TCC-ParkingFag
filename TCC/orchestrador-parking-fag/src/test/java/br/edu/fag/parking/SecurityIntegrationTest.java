@@ -112,6 +112,25 @@ class SecurityIntegrationTest {
         // Uniqueness is a regression sample, not a mathematical proof of entropy.
     }
 
+    @Test void forwardedHttpsStillCreatesSecureCookie() throws Exception {
+        var response=mvc.perform(get("/api/v1/reservations/current")
+            .header("X-Forwarded-Proto","https"))
+            .andExpect(status().isOk()).andReturn().getResponse();
+        assertThat(response.getHeader("Set-Cookie")).contains("Secure","HttpOnly","SameSite=Strict");
+    }
+
+    @Test void rfcForwardedAddressAlsoCannotEvadeRateLimit() throws Exception {
+        int limited=0;
+        for(int i=0;i<61;i++) {
+            int result=mvc.perform(mutation("/api/v1/reservations",new Cookie("parking_session",String.format("%043d",i)),
+                Map.of("spotCode","missing")).header("Forwarded","for=203.0.113."+i+";proto=https"))
+                .andReturn().getResponse().getStatus();
+            assertThat(result).isIn(404,429);
+            if(result==429) limited++;
+        }
+        assertThat(limited).isPositive();
+    }
+
     @Test void sessionStoredAsSha256AndNeverPublished() throws Exception {
         Cookie owner = session(); String id = reserve(owner);
         String expected = HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256")

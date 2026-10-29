@@ -1,0 +1,7 @@
+----------
+1. WARNING in C:\Users\Ti\Desktop\GPT\TCC\orchestrador-parking-fag\src\test\java\br\edu\fag\parking\ReservationTest.java (at line 10)
+	import jakarta.servlet.http.Cookie;
+	       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The import jakarta.servlet.http.Cookie is never used
+----------
+1 problem (1 warning)

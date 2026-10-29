@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: SEC-PROXY-01: public requests cannot invoke ingestion or inspect secrets
+ok 1 - SEC-PROXY-01: public requests cannot invoke ingestion or inspect secrets
+  ---
+  duration_ms: 51.5651
+  type: 'test'
+  ...
+# Subtest: SEC-PROXY-02: cross-origin reservation forgery never reaches backend
+ok 2 - SEC-PROXY-02: cross-origin reservation forgery never reaches backend
+  ---
+  duration_ms: 21.1985
+  type: 'test'
+  ...
+# Subtest: SEC-PROXY-03: oversized bot payload rejected before forwarding
+ok 3 - SEC-PROXY-03: oversized bot payload rejected before forwarding
+  ---
+  duration_ms: 12.6944
+  type: 'test'
+  ...
+# Subtest: SEC-PROXY-04: forged ingestion and forwarding headers stripped
+ok 4 - SEC-PROXY-04: forged ingestion and forwarding headers stripped
+  ---
+  duration_ms: 7.6468
+  type: 'test'
+  ...
+# Subtest: SEC-PROXY-05: browser headers prohibit script injection and framing
+ok 5 - SEC-PROXY-05: browser headers prohibit script injection and framing
+  ---
+  duration_ms: 7.33
+  type: 'test'
+  ...
+# Subtest: SEC-PROXY-06: encoded traversal cannot read files outside build
+ok 6 - SEC-PROXY-06: encoded traversal cannot read files outside build
+  ---
+  duration_ms: 8.9656
+  type: 'test'
+  ...
+# Subtest: SEC-PROXY-07: observation - read bots encounter no rate limit at proxy
+ok 7 - SEC-PROXY-07: observation - read bots encounter no rate limit at proxy
+  ---
+  duration_ms: 53.3768
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 261.6808

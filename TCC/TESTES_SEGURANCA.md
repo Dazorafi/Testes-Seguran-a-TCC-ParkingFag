@@ -1,5 +1,11 @@
 # Testes de segurança do Parking FAG
 
+## Atualizacao de 29 de outubro de 2026
+
+As duas falhas identificadas em 28 de outubro foram corrigidas, mantendo os testes ativos. Foram acrescentados dois casos para preservar o cookie Secure com HTTPS encaminhado e impedir contorno por cabecalho Forwarded. Os 45 casos de seguranca passaram na validacao local. As secoes de resultados de 28 de outubro abaixo sao o registro historico da versao anterior, nao o resultado esperado da versao corrigida.
+
+O repositorio unificado agora possui workflows na raiz para testes de Pull Requests e deploy local apos CI aprovado. Veja `GUIA_CICD.md`, na raiz, para publicar o PR e cadastrar o runner de deploy. A execucao no GitHub e o deploy real dependem dessa ativacao; nao sao comprovados apenas pela presenca dos arquivos YAML.
+
 Os testes executam os fontes reais dos três repositórios. O banco dos testes Java é H2 em memória, isolado do MySQL operacional. As sessões, chaves e dados inseridos são sintéticos. Nenhum teste precisa ler o arquivo `.env`.
 
 ## Arquivos

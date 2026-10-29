@@ -4,7 +4,7 @@ import { resolve, extname, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const here = fileURLToPath(new URL("..", import.meta.url));
-const types = { ".html":"text/html; charset=utf-8", ".js":"text/javascript; charset=utf-8", ".css":"text/css; charset=utf-8", ".svg":"image/svg+xml", ".png":"image/png", ".ico":"image/x-icon" };
+const types = { ".html":"text/html; charset=utf-8", ".json":"application/json; charset=utf-8", ".js":"text/javascript; charset=utf-8", ".css":"text/css; charset=utf-8", ".svg":"image/svg+xml", ".png":"image/png", ".ico":"image/x-icon" };
 function allowed(path, method) {
   return method === "GET" && ["/api/v1/parking-spots", "/api/v1/parking-spots/summary", "/api/v1/parking-spots/alternatives", "/api/v1/reservations/current"].includes(path)
     || method === "POST" && (path === "/api/v1/reservations" || /^\/api\/v1\/reservations\/[a-f0-9-]{36}\/(confirm|reject|cancel)$/.test(path));

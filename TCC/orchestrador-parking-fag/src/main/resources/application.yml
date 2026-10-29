@@ -1,7 +1,8 @@
 server:
   port: ${SERVER_PORT:8080}
   address: ${SERVER_ADDRESS:127.0.0.1}
-  forward-headers-strategy: framework
+  # Explicit ordered filters preserve the connection address before proxy headers.
+  forward-headers-strategy: none
 spring:
   datasource:
     url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:parking_fag}?createDatabaseIfNotExist=true&connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true
