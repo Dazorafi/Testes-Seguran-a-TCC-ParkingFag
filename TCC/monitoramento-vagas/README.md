@@ -1,5 +1,16 @@
 # Monitoramento de vagas Parking FAG
 
+TESTE
+TESTE
+TESTE
+TESTE
+TESTE
+TESTE
+TESTE
+TESTE
+TESTE
+
+
 > Atualização de 15/10/2026: [correção da sombra na A-01 e seus limites](docs/PCD.md).
 > A execução integrada atual está em `orchestrador-parking-fag/docs/EXECUCAO_RESERVAS.md`.
 > O launcher Java compartilha uma chave temporária de ingestão e usa sync 15s/retry 30s;
