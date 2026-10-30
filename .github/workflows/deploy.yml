@@ -1,0 +1,95 @@
+name: Deploy local aprovado
+
+on:
+  workflow_run:
+    workflows: [Testes e build]
+    branches: [main]
+    types: [completed]
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: deploy-parking-fag
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # PRs, forks, manual test runs and failed CI runs never reach this local runner.
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push' &&
+      github.event.workflow_run.head_branch == 'main' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
+    runs-on: [self-hosted, Windows, X64, parking-fag]
+    timeout-minutes: 30
+    environment: estacionamento-local
+    defaults:
+      run:
+        shell: powershell
+    steps:
+      - name: Verificar que o commit aprovado continua sendo o atual de main
+        id: revision
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          APPROVED_SHA: ${{ github.event.workflow_run.head_sha }}
+          API_URL: ${{ github.api_url }}
+        run: |
+          $headers = @{ Authorization = "Bearer $env:GH_TOKEN"; Accept = 'application/vnd.github+json' }
+          $latest = Invoke-RestMethod -Uri "$env:API_URL/repos/$env:REPOSITORY/commits/main" -Headers $headers
+          if ($latest.sha -ne $env:APPROVED_SHA) {
+            'deploy=false' | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+            Write-Host 'Commit antigo: aguardando o CI da versao atual de main.'
+          } else {
+            'deploy=true' | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+          }
+      - uses: actions/checkout@v7
+        if: steps.revision.outputs.deploy == 'true'
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          persist-credentials: false
+      - uses: actions/setup-java@v5
+        if: steps.revision.outputs.deploy == 'true'
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: actions/setup-node@v7
+        if: steps.revision.outputs.deploy == 'true'
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - uses: actions/setup-python@v7
+        if: steps.revision.outputs.deploy == 'true'
+        with:
+          python-version: '3.12'
+      - name: Baixar o JAR do mesmo CI aprovado
+        if: steps.revision.outputs.deploy == 'true'
+        uses: actions/download-artifact@v8
+        with:
+          name: build-java
+          path: deploy-artifacts/java
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+      - name: Baixar o frontend do mesmo CI aprovado
+        if: steps.revision.outputs.deploy == 'true'
+        uses: actions/download-artifact@v8
+        with:
+          name: build-frontend
+          path: deploy-artifacts/frontend
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+      - name: Atualizar os tres servicos locais e verificar saude
+        if: steps.revision.outputs.deploy == 'true'
+        env:
+          DEPLOY_ROOT: ${{ vars.PARKING_DEPLOY_ROOT }}
+          APPROVED_SHA: ${{ github.event.workflow_run.head_sha }}
+          DEPLOYMENT_ID: ${{ github.run_id }}-${{ github.run_attempt }}
+        run: |
+          $root = $env:DEPLOY_ROOT
+          if ([string]::IsNullOrWhiteSpace($root)) { $root = Join-Path $env:LOCALAPPDATA 'ParkingFagDeploy' }
+          & .\scripts\deploy-local.ps1 -SourceRoot (Join-Path $env:GITHUB_WORKSPACE 'TCC') `
+            -ArtifactRoot (Join-Path $env:GITHUB_WORKSPACE 'deploy-artifacts') `
+            -DeployRoot $root -CommitSha $env:APPROVED_SHA -DeploymentId $env:DEPLOYMENT_ID
+          if ($LASTEXITCODE -ne 0) { throw 'Deploy nao foi concluido.' }

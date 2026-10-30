@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-28",
+  "timezone": "America/Sao_Paulo",
+  "security": {
+    "cases": 43,
+    "passed": 41,
+    "failed": 2,
+    "skipped": 0
+  },
+  "suites": {
+    "java": {
+      "cases": 24,
+      "passed": 22,
+      "failed": 2,
+      "exit_code": 1
+    },
+    "proxy": {
+      "cases": 7,
+      "passed": 7,
+      "failed": 0,
+      "exit_code": 0,
+      "includes_one_characterization_of_missing_read_limit": true
+    },
+    "react": {
+      "cases": 3,
+      "passed": 3,
+      "failed": 0,
+      "exit_code": 0
+    },
+    "python": {
+      "cases": 9,
+      "passed": 9,
+      "failed": 0,
+      "exit_code": 0
+    }
+  },
+  "failed_tests": [
+    "botsAreRateLimitedEvenWhenRotatingCookiesAndSpoofingForwardedIp()",
+    "missingConfiguredIngestionSecretMustNotPermitAnonymousWrites()"
+  ],
+  "production_code_modified": false,
+  "database": "isolated H2; no production MySQL access",
+  "java_compiler": "ECJ 3.42.0; target Java 17",
+  "java_runner": "JUnit Console 1.12.2",
+  "runner_powershell": "syntax validated; Java Maven execution blocked by Windows path permissions; ECJ/JUnit alternative executed"
+}

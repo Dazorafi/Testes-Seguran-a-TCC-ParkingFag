@@ -1,0 +1,15 @@
+✔ SEC-PROXY-01: public requests cannot invoke ingestion or inspect secrets (43.2957ms)
+✔ SEC-PROXY-02: cross-origin reservation forgery never reaches backend (29.8062ms)
+✔ SEC-PROXY-03: oversized bot payload rejected before forwarding (9.2161ms)
+✔ SEC-PROXY-04: forged ingestion and forwarding headers stripped (5.2492ms)
+✔ SEC-PROXY-05: browser headers prohibit script injection and framing (5.8775ms)
+✔ SEC-PROXY-06: encoded traversal cannot read files outside build (6.7773ms)
+✔ SEC-PROXY-07: observation - read bots encounter no rate limit at proxy (33.8958ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 214.987

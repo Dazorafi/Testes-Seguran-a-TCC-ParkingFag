@@ -1,0 +1,37 @@
+Attempt 1: exit 0
+
+Atualizacao aplicada. Nenhum commit ou push foi executado.
+Siga GUIA_CICD.md, na raiz do repositorio, para abrir o Pull Request.
+ M TCC/TESTES_SEGURANCA.md
+ M TCC/orchestrador-parking-fag/src/main/java/br/edu/fag/parking/ReservationController.java
+ M TCC/orchestrador-parking-fag/src/main/java/br/edu/fag/parking/WebConfiguration.java
+ M TCC/orchestrador-parking-fag/src/main/resources/application.yml
+ M TCC/orchestrador-parking-fag/src/test/java/br/edu/fag/parking/SecurityIntegrationTest.java
+?? .github/
+?? GUIA_CICD.md
+?? TCC/orchestrador-parking-fag/src/main/java/br/edu/fag/parking/ConnectionAddressFilter.java
+?? scripts/
+Pressione qualquer tecla para continuar. . . 
+
+Attempt 2: exit 0
+error: .github/actionlint.yaml: already exists in working directory
+error: .github/workflows/testes-pr.yml: already exists in working directory
+error: .github/workflows/deploy.yml: already exists in working directory
+error: scripts/deploy-local.ps1: already exists in working directory
+error: scripts/test-deploy.ps1: already exists in working directory
+error: GUIA_CICD.md: already exists in working directory
+error: patch failed: TCC/TESTES_SEGURANCA.md:1
+error: TCC/TESTES_SEGURANCA.md: patch does not apply
+error: patch failed: TCC/orchestrador-parking-fag/src/main/java/br/edu/fag/parking/WebConfiguration.java:6
+error: TCC/orchestrador-parking-fag/src/main/java/br/edu/fag/parking/WebConfiguration.java: patch does not apply
+error: patch failed: TCC/orchestrador-parking-fag/src/main/java/br/edu/fag/parking/ReservationController.java:38
+error: TCC/orchestrador-parking-fag/src/main/java/br/edu/fag/parking/ReservationController.java: patch does not apply
+error: TCC/orchestrador-parking-fag/src/main/java/br/edu/fag/parking/ConnectionAddressFilter.java: already exists in working directory
+error: patch failed: TCC/orchestrador-parking-fag/src/main/resources/application.yml:1
+error: TCC/orchestrador-parking-fag/src/main/resources/application.yml: patch does not apply
+error: patch failed: TCC/orchestrador-parking-fag/src/test/java/br/edu/fag/parking/SecurityIntegrationTest.java:112
+error: TCC/orchestrador-parking-fag/src/test/java/br/edu/fag/parking/SecurityIntegrationTest.java: patch does not apply
+Esta atualizacao ja esta aplicada. Nenhum arquivo foi alterado.
+Pressione qualquer tecla para continuar. . . 
+
+Verified: all 12 files match; git diff --check passed.

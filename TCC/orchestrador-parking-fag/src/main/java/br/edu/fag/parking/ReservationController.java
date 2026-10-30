@@ -38,7 +38,7 @@ public class ReservationController {
         long minute = System.currentTimeMillis() / 60000;
         buckets.entrySet().removeIf(e -> e.getValue().minute() < minute - 1);
         if (buckets.size() > 10000) throw new ResponseStatusException(HttpStatus.TOO_MANY_REQUESTS, "Tente novamente mais tarde");
-        var bucket = buckets.compute(request.getRemoteAddr(), (key, old) ->
+        var bucket = buckets.compute(ConnectionAddressFilter.address(request), (key, old) ->
             old == null || old.minute() != minute ? new Bucket(minute, 1) : new Bucket(minute, old.count() + 1));
         if (bucket.count() > 30) throw new ResponseStatusException(HttpStatus.TOO_MANY_REQUESTS, "Aguarde para tentar novamente");
     }
