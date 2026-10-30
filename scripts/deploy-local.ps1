@@ -59,8 +59,9 @@ New-Item -ItemType Directory -Force -Path (Join-Path $backend 'target') | Out-Nu
 Copy-Item -LiteralPath $jar -Destination (Join-Path $backend 'target/orchestrador-parking-fag-1.0.0.jar')
 Copy-Item -LiteralPath $frontendArtifact -Destination (Join-Path $frontend 'dist') -Recurse
 $publishedAt = [datetime]::UtcNow.ToString('o')
-@{commit=$CommitSha;deployment=$DeploymentId;publishedAt=$publishedAt} | ConvertTo-Json |
-    Set-Content -LiteralPath (Join-Path $frontend 'dist/deploy-info.json') -Encoding UTF8
+$metadata = @{commit=$CommitSha;deployment=$DeploymentId;publishedAt=$publishedAt} | ConvertTo-Json
+# Windows PowerShell UTF8 adds a BOM, which breaks the JSON health check.
+[IO.File]::WriteAllText((Join-Path $frontend 'dist/deploy-info.json'),$metadata,(New-Object Text.UTF8Encoding($false)))
 $versionPage = @"
 <!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Versao publicada Parking FAG</title>
 <h1>Versao em execucao do Parking FAG</h1><p>Commit: <code>$CommitSha</code></p>
